@@ -1,5 +1,7 @@
 # Openfire Station Name In Roster Plugin
 
+<img width="579" height="998" alt="image" src="https://github.com/user-attachments/assets/0e52b351-6a9e-4e62-9ff8-10274107c274" />
+
 Plugin de alto impacto e leve para o servidor XMPP Openfire que injeta dinamicamente o nome da estação de trabalho (Resource) no status do usuário em tempo real.
 
 ## 🚀 A Solução
