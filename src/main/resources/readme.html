@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333;
+            padding: 15px;
+        }
+        h2 { color: #f46f22; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        h3 { color: #222; margin-top: 20px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight { font-weight: bold; color: #111; }
+        .footer { margin-top: 30px; font-size: 0.9em; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Station Name In Roster Plugin</h2>
+    
+    <h3>📌 Proposta do Plugin (O que ele faz?)</h3>
+    <p>Em ambientes corporativos de saúde e administrativo, gerenciar a localização física dos operadores é um desafio constante para as equipes de suporte de TI. Este plugin foi desenvolvido para resolver essa dor de forma totalmente automatizada e transparente.</p>
+    <p>Ele rastreia em tempo real qual computador físico cada funcionário está utilizando e exibe o nome da estação de trabalho diretamente na lista de contatos (Roster) do Spark para toda a organização.</p>
+
+    <h3>⚙️ Como o Script Funciona?</h3>
+    <ul>
+        <li><span class="highlight">Interceptação Server-Side:</span> O plugin atua diretamente no núcleo do servidor Openfire. Ele monitora a rede continuamente aguardando a troca de status dos usuários.</li>
+        <li><span class="highlight">Captura do Hostname (Resource):</span> No momento em que um usuário faz login ou altera seu estado, o plugin captura o "Resource" da sessão XMPP, que o aplicativo Spark preenche de forma nativa com o nome de rede da máquina Windows.</li>
+        <li><span class="highlight">Injeção Dinâmica:</span> O script modifica temporariamente a mensagem de presença em memória, inserindo o nome do computador no final do status atual do usuário.</li>
+        <li><span class="highlight">Compatibilidade de Estados:</span> A regra é aplicada de forma abrangente para os estados <span class="highlight">Disponível (Online)</span>, <span class="highlight">Ausente (Away)</span> e <span class="highlight">Não Perturbe (DND)</span>.</li>
+        <li><span class="highlight">Preservação de Dados:</span> Caso o usuário utilize um status customizado (como a indicação de seu ramal ou subsetor), o plugin preserva essa informação intacta e apenas concatena o nome do computador ao final da frase.</li>
+    </ul>
+
+    <h3>💡 Principais Benefícios</h3>
+    <ul>
+        <li><span class="highlight">Rastreabilidade Imediata:</span> Localize qualquer funcionário fisicamente na clínica apenas olhando para a lista do Spark, agilizando atendimentos remotos e presenciais.</li>
+        <li><span class="highlight">Impacto Zero no Cliente:</span> O processamento é feito inteiramente no servidor. Não requer nenhuma configuração, instalação ou atualização nas máquinas dos usuários finais.</li>
+    </ul>
+
+    <div class="footer">
+        <p><strong>Desenvolvido por:</strong> Guilherme Santos</p>
+        <p><strong>Versão:</strong> 1.0.0 (Maio/2026)</p>
+    </div>
+
+</body>
+</html>

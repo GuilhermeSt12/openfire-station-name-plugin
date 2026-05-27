@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <class>br.com.clinica.openfire.plugin.StationNamePlugin</class>
+    <name>Nome da Estação no Roster</name>
+    <description>Injeta dinamicamente o nome da estacao de trabalho ao lado do status do usuario no Spark em tempo de execucao.</description>
+    <author>Guilherme Santos</author>
+    <version>1.0.0</version>
+    <date>27/05/2026</date>
+    <minServerVersion>5.0.0</minServerVersion>
+    
+    <readme>readme.html</readme>
+    <changelog>changelog.html</changelog>
+</plugin>
